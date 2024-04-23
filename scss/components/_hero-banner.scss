@@ -1,0 +1,30 @@
+.hero-banner {
+  position: relative;
+  border: 1px solid green;
+  height: 100dvh;
+  background: linear-gradient(45deg, $purple, $blue);
+
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .hero-content {
+      width: 50%;
+      border: 1px solid gold;
+    }
+  }
+
+  .hero-banner-wave {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border: 1px solid orange;
+
+    img {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+}

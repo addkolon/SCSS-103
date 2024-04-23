@@ -1,0 +1,19 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  border: 1px solid purple;
+  display: flex;
+  align-items: center;
+  // background-color: red;
+  width: 100%;
+  z-index: 999;
+
+  .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

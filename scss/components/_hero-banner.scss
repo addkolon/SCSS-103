@@ -12,8 +12,22 @@
     align-items: center;
 
     .hero-content {
-      width: 50%;
-      border: 1px solid gold;
+      width: 45%;
+      // border: 1px solid gold;
+
+      h1 {
+        font-size: 64px;
+        color: $cream;
+        line-height: 130%;
+        margin-bottom: 40px;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 160%;
+        color: $cream;
+      }
     }
 
     .hero-image {
@@ -21,7 +35,25 @@
       right: -80px;
       bottom: 80px;
       width: 60%;
-      border: 1px solid greenyellow;
+      // border: 1px solid greenyellow;
+      transform: translateY(100%);
+
+      animation: handanimation 2s 1s ease forwards;
+
+      @keyframes handanimation {
+        0% {
+          transform: translateY(100%);
+        }
+
+        80% {
+          transform: translateY(-1%);
+        }
+      
+        100% {
+          transform: translateY(0);
+        }
+      
+      }
 
       img {
         max-width: 100%;
@@ -34,7 +66,7 @@
     left: 0;
     bottom: -100px;
     width: 100%;
-    border: 1px solid orange;
+    // border: 1px solid orange;
 
     img {
       width: 100%;

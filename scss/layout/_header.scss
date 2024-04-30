@@ -9,6 +9,8 @@ header {
   // background-color: red;
   width: 100%;
   z-index: 999;
+  opacity: 0;
+  animation: opacity 1s 2.8s forwards ease-out;
 
   .container {
     width: 100%;
@@ -24,5 +26,11 @@ header {
         font-weight: 600; //SemiBold;
       }
     }
+  }
+}
+
+@keyframes opacity {
+  to {
+    opacity: 100%;
   }
 }

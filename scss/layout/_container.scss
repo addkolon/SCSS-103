@@ -1,6 +1,17 @@
 .container {
   max-width: 1280px;
+  width: 100%;
   // border: 1px salmon solid;
   margin: 0 auto;
   padding: 0 1rem; // Första siffran upp/nere, Andra siffran vänster/höger
+
+  .row {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    
+    .col {
+      width: 100%;
+    }
+  }
 }

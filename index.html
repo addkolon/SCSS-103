@@ -12,11 +12,19 @@
         <div id="logotype">
           <h1>Logo</h1>
         </div>
-        <nav>
+        <nav id="off-screen-nav-trigger" onclick="triggerNav()">
           <img src="assets/images/hamburger-menu.svg" alt="" />
         </nav>
       </div>
     </header>
+    <nav id="off-screen-nav" class="">
+      <ul>
+        <li><a href="">Link</a></li>
+        <li><a href="">Link</a></li>
+        <li><a href="">Link</a></li>
+        <li><a onclick="triggerNav()">Close</a></li>
+      </ul>
+    </nav>
     <section class="hero-banner">
       <div class="container">
         <div class="hero-content">
@@ -65,6 +73,14 @@
         </div>
       </div>
     </section>
+    <script>
+      const offScreenNav = document.getElementById("off-screen-nav");
+
+      function triggerNav() {
+        console.log("Trigger Happy")
+        offScreenNav.classList.toggle("active");
+      }
+    </script> 
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

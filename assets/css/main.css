@@ -46,10 +46,27 @@ body {
   right: -80px;
   bottom: 80px;
   width: 60%;
-  transform: translateY(120%);
-  animation: handanimation 1s 0.6s ease-out forwards;
 }
-@keyframes handanimation {
+.hero-banner .container .hero-image img {
+  max-width: 100%;
+  transform: translateY(120%);
+  animation: slideUpFromBottom 1s 0.6s ease-out forwards;
+  pointer-events: none;
+}
+.hero-banner .hero-banner-wave {
+  position: absolute;
+  left: 0;
+  bottom: -100px;
+  width: 100%;
+}
+.hero-banner .hero-banner-wave img {
+  width: 100%;
+  min-width: 100%;
+  transform: translateY(100%);
+  animation: slideUpFromBottom 1s 0.2s ease-out forwards;
+}
+
+@keyframes slideUpFromBottom {
   0% {
     transform: translateY(120%);
   }
@@ -71,22 +88,6 @@ body {
     transform: translateX(0);
   }
 }
-.hero-banner .container .hero-image img {
-  max-width: 100%;
-}
-.hero-banner .hero-banner-wave {
-  position: absolute;
-  left: 0;
-  bottom: -100px;
-  width: 100%;
-  transform: translateY(100%);
-  animation: handanimation 1s 0s ease-out forwards;
-}
-.hero-banner .hero-banner-wave img {
-  width: 100%;
-  min-width: 100%;
-}
-
 @keyframes waving {
   0% {
     transform: rotate(0);
@@ -101,6 +102,36 @@ body {
     transform: rotate(0);
   }
 }
+#off-screen-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #F8EAB6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #65309B;
+  height: 30%;
+  z-index: 99999;
+  transform: translateY(-100%);
+  transition: all 1s;
+}
+#off-screen-nav.active {
+  transform: translateX(0);
+}
+#off-screen-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#off-screen-nav ul li a {
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
 .card {
   background-color: white;
   padding: 2rem;
@@ -168,7 +199,31 @@ header .container #logotype h1 {
   font-size: 36px;
   font-weight: 600;
 }
+header .container #logotype h1:hover {
+  animation-name: aroundTheWorld;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+}
+header .container #off-screen-nav-trigger {
+  cursor: pointer;
+}
 
+@keyframes aroundTheWorld {
+  0% {
+    transform: rotate(0) scale(100%);
+    text-shadow: none;
+  }
+  80% {
+    transform: rotate(370deg) scale(150%);
+    text-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(100%);
+    text-shadow: none;
+  }
+}
 @keyframes opacity {
   to {
     opacity: 100%;

@@ -41,45 +41,18 @@
       bottom: 80px;
       width: 60%;
       // border: 1px solid greenyellow;
-      transform: translateY(120%);
-
-      animation: handanimation 1s .6s ease-out forwards;
-
-      @keyframes handanimation {
-        0% {
-          transform: translateY(120%);
-        }
-
-        80% {
-          transform: translateY(-1%);
-        }
       
-        100% {
-          transform: translateY(0);
-        }
-      }
+
 
       &:hover {
         // animation: waving 1.2s infinite;
       }
 
-      @keyframes slideInLeft {
-        0% {
-          transform: translateX(-1000px);
-        }
-
-        80% {
-          transform: translateX(6%);
-        }
-      
-        100% {
-          transform: translateX(0);
-        }
-      
-      }
-
       img {
         max-width: 100%;
+        transform: translateY(120%);
+        animation: slideUpFromBottom 1s .6s ease-out forwards;
+        pointer-events: none;
       }
     }
   }
@@ -90,14 +63,45 @@
     bottom: -100px;
     width: 100%;
     // border: 1px solid orange;
-    transform: translateY(100%);
-    animation: handanimation 1s 0s ease-out forwards;
+    
 
     img {
       width: 100%;
       min-width: 100%;
+      transform: translateY(100%);
+      animation: slideUpFromBottom 1s 0.2s ease-out forwards;
     }
   }
+}
+
+// MOBILE AND WAVE
+@keyframes slideUpFromBottom {
+  0% {
+    transform: translateY(120%);
+  }
+
+  80% {
+    transform: translateY(-1%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-1000px);
+  }
+
+  80% {
+    transform: translateX(6%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+
 }
 
 @keyframes waving {
